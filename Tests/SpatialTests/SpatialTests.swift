@@ -2,14 +2,14 @@ import XCTest
 @testable import Spatial
 
 final class SpatialTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        
+    func testEngineCreation() {
+
+		let engine = Spatial("Test engine")
+
+
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("Test engine creation", testEngineCreation),
     ]
 }

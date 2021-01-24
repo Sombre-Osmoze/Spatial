@@ -6,22 +6,26 @@
 //
 
 import Foundation
+import Logging
 
 /// Engine
-class Spatial {
+public class Spatial {
 
 
 
-	let start: Date
-
+	let start: Date?
 
 	// MARK: - Setup
 
-	init(start: Date) {
+	private let logger : Logger
+
+	public init(logger: Logger, start: Date?) {
 		self.start = start
+		self.logger = logger
+		logger.notice("Engine created.")
 	}
 
-	convenience init() {
-		self.init(start: Date())
+	public convenience init(_ label: String) {
+		self.init(logger: .init(label: label), start: nil)
 	}
 }
