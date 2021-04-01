@@ -8,4 +8,4 @@
 import Foundation
 
 
-public typealias Position = SIMD3<Float32>
+public typealias Position = SIMD4<Float32>
